@@ -1,0 +1,59 @@
+:root{
+    --bg-white: white;
+    --bg-black: black;
+    --bg-green: #2B7E38;
+    --bg-orange: #E26A07;
+    --bg-gray: #535353;
+    --bg-yellow: #FFC300;
+}
+body{
+    font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  overflow-x: hidden;
+}
+nav{
+    width: 99vw;
+    margin: auto;
+    padding: 5px;
+    display: flex;
+}
+.nav-content{
+    width: 98%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.items-nav a{
+    text-decoration: none;
+    color: var(--bg-white);
+    margin-left: 10px;
+}
+
+footer{
+    color: var(--bg-white);
+    height: 25vh;
+    margin-top: 10px;
+    background-color: var(--bg-black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-footer{
+    width: 150px;
+    height: auto;
+}
+
+.logo-footer img{
+    width: 100%;
+}
+
+.redes-footer{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+

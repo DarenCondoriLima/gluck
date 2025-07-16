@@ -1,0 +1,59 @@
+body{
+    background-color: var(--bg-black);
+}
+.carta{
+    width: 98vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.carta h1{
+    color: var(--bg-orange);
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.carta table{
+    width: 60%;
+}
+
+.carta tr, .carta td, .carta table{
+    /*border: 1px dashed #fff;*/
+    padding: 10px;
+}
+
+.carta h2{
+    color: var(--bg-orange);
+    font-size: 2rem;
+}
+
+.carta-item-subCat{
+    color: var(--bg-yellow);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.tamanho-pizza{
+    color: var(--bg-orange);
+    font-size: 1.2rem;
+}
+
+.carta-item p{
+    color: var(--bg-orange);
+}
+
+.carta-item{
+    margin-top: 10px;
+    color: var(--bg-white);
+}
+
+.carta-precio1{
+    color: var(--bg-yellow);
+}
+.carta-precio2{
+    color: var(--bg-orange);
+}
+.carta-precio3{
+    color: var(--bg-green);
+}
