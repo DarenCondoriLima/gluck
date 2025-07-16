@@ -47,7 +47,9 @@ body{
     margin-top: 10px;
     color: var(--bg-white);
 }
-
+.carta-precio0{
+    color: var(--bg-white);
+}
 .carta-precio1{
     color: var(--bg-yellow);
 }
