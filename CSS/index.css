@@ -1,65 +1,46 @@
-body{
+
+body {
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    overflow-x: hidden;
     background-image: url(../img/bg.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-}
-.cards{
-    width: 98vw;
-    margin-top: 10px;
+    min-height: 100vh;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
 }
 
-.card {
-    position: relative;
-    width: 48%;
+.card-gluck {
     height: 80vh;
-    overflow: hidden;
 }
 
-.card img {
-    width: 100%;
+.card-gluck .card-img {
     height: 100%;
     object-fit: cover;
-    display: block
 }
 
-.card h2,
-.card .item-button {
-    position: absolute;
-    color: white;
-    padding: 5px 10px;
-    margin: 0;
-    text-align: center;
-    width: 100%;
-    box-sizing: border-box;
+.card-gluck .card-img-overlay {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 80%, rgba(0,0,0,0.6) 100%);
 }
 
-.card h2 {
-    background-color: rgba(0, 0, 0, 0.6);
+.card-gluck .card-title {
     font-size: 2rem;
-    top: 0;
-    left: 0;
 }
 
-.card .item-button {
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
-
-.card .item-button div{
-    width: 30%;
-    height: 25px;
-    border-radius: 10px;
-    padding-top: 5px;
-    margin: auto;
+.btn-gluck-custom {
     background-color: var(--bg-gray);
+    color: var(--bg-white);
+    border-radius: 10px;
+    padding: 8px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
-.card .item-button a{
-    text-decoration: none;
-    color: white;
+.btn-gluck-custom:hover {
+    background-color: var(--bg-green);
+    color: var(--bg-white);
 }
