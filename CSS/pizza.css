@@ -1,0 +1,141 @@
+body {
+    background-color: var(--bg-black);
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Specific styles for the pizza menu page */
+.pizza-title {
+    color: var(--bg-orange);
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* Images beside the table */
+.pizza-side-img {
+    max-height: 200px; /* Ajusta la altura máxima para cada imagen */
+    object-fit: contain;
+    width: 100%;
+    margin-top: 200px;
+    /* No margin-bottom here, use mb-3 on HTML for spacing between images */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for rotation */
+}
+
+/* Custom table styles */
+.pizza-table {
+    width: 100%;
+    max-width: 900px; /* Limit max width for better readability on large screens */
+    border-collapse: collapse;
+}
+
+.pizza-table th,
+.pizza-table td {
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+.pizza-table h2 {
+    color: var(--bg-orange);
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+.pizza-item-subCat {
+    color: var(--bg-yellow);
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding-top: 15px;
+}
+
+.pizza-item p {
+    color: var(--bg-orange);
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.pizza-item {
+    color: var(--bg-white);
+}
+
+.pizza-precio1 {
+    color: var(--bg-yellow);
+}
+.pizza-precio2 {
+    color: var(--bg-orange);
+}
+.pizza-precio3 {
+    color: var(--bg-green);
+}
+
+/* Style for the "Atrás" button */
+.btn-gluck-primary {
+    background-color: var(--bg-orange);
+    color: var(--bg-white);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-gluck-primary:hover {
+    background-color: var(--bg-yellow);
+    color: var(--bg-black);
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .pizza-table {
+        font-size: 0.9rem;
+    }
+    .pizza-table h2 {
+        font-size: 1.5rem;
+    }
+    .pizza-item-subCat {
+        font-size: 1.1rem;
+    }
+    /* Ensure all price columns remain visible, table-responsive will handle overflow */
+    .pizza-table th:nth-child(2),
+    .pizza-table td:nth-child(2),
+    .pizza-table th:nth-child(3),
+    .pizza-table td:nth-child(3),
+    .pizza-table th:nth-child(4),
+    .pizza-table td:nth-child(4) {
+        display: table-cell !important; /* Override any previous hiding rules */
+    }
+}
+
+/* Specific adjustments for larger screens to accommodate 4 images + table */
+@media (min-width: 768px) {
+    /* On medium screens and up, the images will appear */
+    .pizza-side-img {
+        max-height: 250px; /* Adjust height for medium screens */
+    }
+    /* Rotate images slightly */
+    .col-lg-2.col-md-3:first-child .pizza-side-img:first-child {
+        transform: rotate(-3deg); /* Rotate first image on left slightly left */
+    }
+    .col-lg-2.col-md-3:first-child .pizza-side-img:last-child {
+        transform: rotate(2deg); /* Rotate second image on left slightly right */
+    }
+    .col-lg-2.col-md-3:last-child .pizza-side-img:first-child {
+        transform: rotate(3deg); /* Rotate first image on right slightly right */
+    }
+    .col-lg-2.col-md-3:last-child .pizza-side-img:last-child {
+        transform: rotate(-2deg); /* Rotate second image on right slightly left */
+    }
+}
+
+@media (min-width: 992px) {
+    /* On large screens and up */
+    .pizza-side-img {
+        max-height: 300px; /* Adjust height for large screens */
+    }
+}
