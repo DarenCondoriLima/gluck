@@ -14,7 +14,7 @@
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.html">
-                <img src="./img/logo.png" alt="Logo Glück" width="100" height="94">
+                <img src="./img/logo.webp" alt="Logo Glück" width="100" height="94">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -43,9 +43,21 @@
         
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-2 col-md-3 d-none d-md-flex flex-column align-items-center justify-content-center">
-                <img src="./img/pizzas.png" alt="Decoración de Pizza Izquierda 1" class="img-fluid pizza-side-img mb-3">
-                <img src="./img/pizzas.png" alt="Decoración de Pizza Izquierda 1" class="img-fluid pizza-side-img mb-3">
-                <img src="./img/pizzas.png" alt="Decoración de Pizza Izquierda 2" class="img-fluid pizza-side-img">
+                <div class="col d-flex justify-content-center">
+                    <div class="card card-category">
+                        <a href="./promos.html" class="text-decoration-none text-white">
+                            <img class="card-img-top" src="./img/promos.webp" alt="Card image for Promos">
+                            <div class="card-body">
+                                <h2 class="card-title-gluck">Promos</h2>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <img src="./img/pizzas.webp" alt="Decoración de Pizza Izquierda 1" class="img-fluid pizza-side-img mb-5 mt-3">
+                <img src="./img/pizzas.webp" alt="Decoración de Pizza Izquierda 1" class="img-fluid pizza-side-img mb-5">
+                <img src="./img/pizzas.webp" alt="Decoración de Pizza Izquierda 1" class="img-fluid pizza-side-img mb-5">
+                <img src="./img/pizzas.webp" alt="Decoración de Pizza Izquierda 1" class="img-fluid pizza-side-img mb-5">
+                <img src="./img/pizzas.webp" alt="Decoración de Pizza Izquierda 2" class="img-fluid pizza-side-img">
             </div>
 
             <div class="col-lg-8 col-md-6">
@@ -54,107 +66,107 @@
                         <thead>
                             <tr>
                                 <th scope="col" class="text-start"><h2>Pizzas</h2></th>
-                                <th scope="col" class="pizza-precio1">Personal</th>
-                                <th scope="col" class="pizza-precio2">Mediana</th>
-                                <th scope="col" class="pizza-precio3">Grande</th>
+                                <th scope="col" id="pizza-precio1">Personal</th>
+                                <th scope="col" id="pizza-precio2">Mediana</th>
+                                <th scope="col" id="pizza-precio3">Grande</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td colspan="4" class="pizza-item-subCat text-start">CLASICAS</td>
+                                <td colspan="4" id="pizza-item-subCat" class="text-start">CLASICAS</td>
                             </tr>
                             <tr>
                                 <td class="pizza-item text-start"><p class="mb-0">AMERICANA</p> Mozarella, Jamón</td>
-                                <td class="pizza-precio1">S/.20</td>
-                                <td class="pizza-precio2">S/.30</td>
-                                <td class="pizza-precio3">S/.40</td>
+                                <td id="pizza-precio1">S/.20</td>
+                                <td id="pizza-precio2">S/.30</td>
+                                <td id="pizza-precio3">S/.40</td>
                             </tr>
                             <tr>
                                 <td class="pizza-item text-start"><p class="mb-0">HAWAIANA</p> Mozarella, Jamón, Piña</td>
-                                <td class="pizza-precio1">S/.21</td>
-                                <td class="pizza-precio2">S/.31</td>
-                                <td class="pizza-precio3">S/.41</td>
+                                <td id="pizza-precio1">S/.21</td>
+                                <td id="pizza-precio2">S/.31</td>
+                                <td id="pizza-precio3">S/.41</td>
                             </tr>
                             <tr>
                                 <td class="pizza-item text-start"><p class="mb-0">ARGENTINA</p> Mozarella, Chorizo Argentino</td>
-                                <td class="pizza-precio1">S/.21</td>
-                                <td class="pizza-precio2">S/.31</td>
-                                <td class="pizza-precio3">S/.41</td>
+                                <td id="pizza-precio1">S/.21</td>
+                                <td id="pizza-precio2">S/.31</td>
+                                <td id="pizza-precio3">S/.41</td>
                             </tr>
                             <tr>
-                                <td colspan="4" class="pizza-item-subCat text-start">CLASICAS ESPECIALES</td>
+                                <td colspan="4" id="pizza-item-subCat" class=" text-start">CLASICAS ESPECIALES</td>
                             </tr>
                             <tr>
                                 <td class="pizza-item text-start"><p class="mb-0">CHORI / SALAME</p> Mozarella, Chorizo, Salame</td>
-                                <td class="pizza-precio1">S/.22</td>
-                                <td class="pizza-precio2">S/.32</td>
-                                <td class="pizza-precio3">S/.42</td>
+                                <td id="pizza-precio1">S/.22</td>
+                                <td id="pizza-precio2">S/.32</td>
+                                <td id="pizza-precio3">S/.42</td>
                             </tr>
                             <tr>
                                 <td class="pizza-item text-start"><p class="mb-0">JAMÓN / SALAME</p> Mozarella, Jamón, Salame</td>
-                                <td class="pizza-precio1">S/.22</td>
-                                <td class="pizza-precio2">S/.33</td>
-                                <td class="pizza-precio3">S/.43</td>
+                                <td id="pizza-precio1">S/.22</td>
+                                <td id="pizza-precio2">S/.33</td>
+                                <td id="pizza-precio3">S/.43</td>
                             </tr>
                             <tr>
                                 <td class="pizza-item text-start"><p class="mb-0">POLLITO CHESS</p> Mozarella, Jamón, Pollo, Tocino, Champiñon</td>
-                                <td class="pizza-precio1">S/.22</td>
-                                <td class="pizza-precio2">S/.33</td>
-                                <td class="pizza-precio3">S/.43</td>
+                                <td id="pizza-precio1">S/.22</td>
+                                <td id="pizza-precio2">S/.33</td>
+                                <td id="pizza-precio3">S/.43</td>
                             </tr>
                             <tr>
-                                <td colspan="4" class="pizza-item-subCat text-start">VEGETARIANAS</td>
+                                <td colspan="4" id="pizza-item-subCat" class="text-start">VEGETARIANAS</td>
                             </tr>
                             <tr>
                                 <td class="pizza-item text-start"><p class="mb-0">VEGETARIANA</p> Mozarella, Tomate, Zugini, Cebolla, Aceitunas, Champiñon, Albahaca</td>
-                                <td class="pizza-precio1">S/.22</td>
-                                <td class="pizza-precio2">S/.35</td>
-                                <td class="pizza-precio3">S/.45</td>
+                                <td id="pizza-precio1">S/.22</td>
+                                <td id="pizza-precio2">S/.35</td>
+                                <td id="pizza-precio3">S/.45</td>
                             </tr>
                             <tr>
                                 <td class="pizza-item text-start"><p class="mb-0">NAPOLITANA</p> Mozarella, Tomate, Albahaca, Aceitunas</td>
-                                <td class="pizza-precio1">S/.20</td>
-                                <td class="pizza-precio2">S/.30</td>
-                                <td class="pizza-precio3">S/.40</td>
+                                <td id="pizza-precio1">S/.20</td>
+                                <td id="pizza-precio2">S/.30</td>
+                                <td id="pizza-precio3">S/.40</td>
                             </tr>
                             <tr>
                                 <td class="pizza-item text-start"><p class="mb-0">MARGARITA</p> Mozarella</td>
-                                <td class="pizza-precio1">S/.19</td>
-                                <td class="pizza-precio2">S/.29</td>
-                                <td class="pizza-precio3">S/.36</td>
+                                <td id="pizza-precio1">S/.19</td>
+                                <td id="pizza-precio2">S/.29</td>
+                                <td id="pizza-precio3">S/.36</td>
                             </tr>
                             <tr>
                                 <td class="pizza-item text-start"><p class="mb-0">CHAMPI</p> Mozarella, Full Champiñon, Aceitunas, Albahaca</td>
-                                <td class="pizza-precio1">S/.22</td>
-                                <td class="pizza-precio2">S/.35</td>
-                                <td class="pizza-precio3">S/.45</td>
+                                <td id="pizza-precio1">S/.22</td>
+                                <td id="pizza-precio2">S/.35</td>
+                                <td id="pizza-precio3">S/.45</td>
                             </tr>
                             <tr>
-                                <td colspan="4" class="pizza-item-subCat text-start">DE LA CASA</td>
+                                <td colspan="4" id="pizza-item-subCat" class="text-start">DE LA CASA</td>
                             </tr>
                             <tr>
                                 <td class="pizza-item text-start"><p class="mb-0">GLÜCK</p> Mozarella, Jamón, Chorizo, Cebolla, Aceitunas, Albahaca</td>
-                                <td class="pizza-precio1">S/.24</td>
-                                <td class="pizza-precio2">S/.35</td>
-                                <td class="pizza-precio3">S/.49</td>
+                                <td id="pizza-precio1">S/.24</td>
+                                <td id="pizza-precio2">S/.35</td>
+                                <td id="pizza-precio3">S/.49</td>
                             </tr>
                             <tr>
                                 <td class="pizza-item text-start"><p class="mb-0">ALEMANA</p> Mozarella, Jamón, Frankfurt, Cabanoci, Tocino</td>
-                                <td class="pizza-precio1">S/.24</td>
-                                <td class="pizza-precio2">S/.35</td>
-                                <td class="pizza-precio3">S/.49</td>
+                                <td id="pizza-precio1">S/.24</td>
+                                <td id="pizza-precio2">S/.35</td>
+                                <td id="pizza-precio3">S/.49</td>
                             </tr>
                             <tr>
                                 <td class="pizza-item text-start"><p class="mb-0">TROPICAL</p> Mozarella, Jamón, Pollo, Durazno, Piña, Champiñon</td>
-                                <td class="pizza-precio1">S/.24</td>
-                                <td class="pizza-precio2">S/.35</td>
-                                <td class="pizza-precio3">S/.49</td>
+                                <td id="pizza-precio1">S/.24</td>
+                                <td id="pizza-precio2">S/.35</td>
+                                <td id="pizza-precio3">S/.49</td>
                             </tr>
                             <tr>
                                 <td class="pizza-item text-start"><p class="mb-0">VIENNESA</p> Mozarella, Salchicha Vienna, Jamón, Chorizo, Salame, Aceitunas, Champiñon</td>
-                                <td class="pizza-precio1">S/.24</td>
-                                <td class="pizza-precio2">S/.35</td>
-                                <td class="pizza-precio3">S/.49</td>
+                                <td id="pizza-precio1">S/.24</td>
+                                <td id="pizza-precio2">S/.35</td>
+                                <td id="pizza-precio3">S/.49</td>
                             </tr>
                         </tbody>
                     </table>
@@ -163,9 +175,21 @@
             </div>
 
             <div class="col-lg-2 col-md-3 d-none d-md-flex flex-column align-items-center justify-content-center">
-                <img src="./img/pizzas.png" alt="Decoración de Pizza Derecha 1" class="img-fluid pizza-side-img mb-3">
-                <img src="./img/pizzas.png" alt="Decoración de Pizza Derecha 1" class="img-fluid pizza-side-img mb-3">
-                <img src="./img/pizzas.png" alt="Decoración de Pizza Derecha 2" class="img-fluid pizza-side-img">
+                <div class="col d-flex justify-content-center">
+                <div class="card card-category">
+                    <a href="./promos.html" class="text-decoration-none text-white">
+                        <img class="card-img-top" src="./img/promos.webp" alt="Card image for Promos">
+                        <div class="card-body">
+                            <h2 class="card-title-gluck">Promos</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+                <img src="./img/pizzas.webp" alt="Decoración de Pizza Derecha" class="img-fluid pizza-side-img mb-5 mt-3">
+                <img src="./img/pizzas.webp" alt="Decoración de Pizza Derecha" class="img-fluid pizza-side-img mb-5">
+                <img src="./img/pizzas.webp" alt="Decoración de Pizza Derecha" class="img-fluid pizza-side-img mb-5">
+                <img src="./img/pizzas.webp" alt="Decoración de Pizza Derecha" class="img-fluid pizza-side-img mb-5">
+                <img src="./img/pizzas.webp" alt="Decoración de Pizza Derecha" class="img-fluid pizza-side-img">
             </div>
         </div>
     </section>
@@ -173,7 +197,7 @@
     <footer class="bg-dark text-white py-3 mt-auto">
         <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
             <div class="logo-footer mb-3 mb-md-0">
-                <img src="./img/logo-BG.png" alt="Logo Glück" class="img-fluid" style="max-width: 150px;">
+                <img src="./img/logo-BG.webp" alt="Logo Glück" class="img-fluid" style="max-width: 150px;">
             </div>
             <div class="redes-footer text-center text-md-end">
                 <span>Nuestras Redes:</span>
