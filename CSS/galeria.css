@@ -1,0 +1,214 @@
+
+body {
+    background-color: var(--bg-black);
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    overflow-x: hidden; /* Prevents horizontal scrollbar */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-title,
+.gallery-subtitle {
+    color: var(--bg-orange);
+    font-weight: bold;
+}
+
+.gallery-title {
+    font-size: 3rem;
+    margin-bottom: 2.5rem; /* More space below main title */
+}
+
+.gallery-subtitle {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* --- Custom Carousel Styles (Integrated with Bootstrap Concepts) --- */
+.container-slider {
+    /* Instead of width: 100vw, we'll let Bootstrap's container manage width */
+    max-width: 900px; /* Limit max width like a standard container */
+    margin: 0 auto; /* Center the slider horizontally */
+    margin-top: 10vh; /* Keep top margin */
+    overflow: hidden;
+    position: relative;
+    border: 3px solid var(--bg-gray); /* Add a border around the carousel */
+    border-radius: 10px; /* Rounded corners for the carousel */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio for responsiveness */
+    /* Remove fixed height to let aspect-ratio control it */
+}
+
+.slider {
+    display: flex;
+    width: 400%; /* Remains the same for 4 slides */
+    height: 100%;
+    margin-left: -100%; /* Initial position */
+}
+
+.slider_section {
+    width: 100%;
+    /* No fixed height here, let slider_img manage it */
+}
+
+.slider_img {
+    display: block;
+    width: 100%;
+    height: 100%; /* Fill the height of slider_section (which is determined by container-slider's aspect-ratio) */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    object-position: center; /* Center the image within its bounds */
+    border-radius: 7px; /* Slight border-radius to match container */
+}
+
+/* Caption (optional, if you want to add text overlays to your custom slider sections) */
+.slider_caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--bg-white);
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    /* Hide on small screens and show on medium and up, similar to Bootstrap's d-none d-md-block */
+    display: none;
+}
+@media (min-width: 768px) { /* Medium devices and up */
+    .slider_caption {
+        display: block;
+    }
+}
+
+.slider_caption h5 {
+    color: var(--bg-yellow);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.slider_caption p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+
+/* Slider Navigation Buttons */
+.slider_btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    color: rgb(224, 224, 224);
+    font-size: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5); /* Add background for visibility */
+    border-radius: 50%; /* Make them circular */
+    display: flex; /* Use flexbox to center the arrow character */
+    justify-content: center;
+    align-items: center;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.slider_btn:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.slider_btn_R {
+    left: 10px;
+}
+
+.slider_btn_L {
+    right: 10px;
+}
+
+/* --- Image Grid Styles - Keep these as they are already good --- */
+.gallery-grid {
+    padding: 0 15px;
+    margin-top: 30px;
+}
+
+.gallery-item {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid var(--bg-gray);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+    transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--bg-orange);
+    box-shadow: 0 5px 15px rgba(226, 106, 7, 0.4);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.modal-content {
+    background-color: transparent;
+    border: none;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+
+/* --- Responsive adjustments (for both custom carousel and general gallery) --- */
+
+@media (max-width: 991.98px) { /* Corresponds to Bootstrap's lg breakpoint */
+    .gallery-title {
+        font-size: 2.5rem;
+    }
+    .gallery-subtitle {
+        font-size: 1.8rem;
+    }
+    /* No specific changes for custom slider, as aspect-ratio handles height */
+}
+
+@media (max-width: 767.98px) { /* Corresponds to Bootstrap's md breakpoint */
+    .gallery-title {
+        font-size: 2rem;
+    }
+    .gallery-subtitle {
+        font-size: 1.5rem;
+    }
+    .gallery-item img {
+        height: 180px;
+    }
+    .slider_btn {
+        width: 30px; /* Smaller buttons on smaller screens */
+        height: 30px;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 575.98px) { /* Corresponds to Bootstrap's sm breakpoint */
+    .gallery-item img {
+        height: 160px;
+    }
+    /* On extra small screens, the grid will automatically stack to 1 column */
+    .slider_btn {
+        width: 25px; /* Even smaller buttons */
+        height: 25px;
+        font-size: 25px;
+    }
+}

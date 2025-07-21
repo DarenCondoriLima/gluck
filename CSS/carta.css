@@ -1,14 +1,4 @@
 /* carta.css */
-
-:root {
-    --bg-white: white;
-    --bg-black: black;
-    --bg-green: #2B7E38;
-    --bg-orange: #E26A07;
-    --bg-gray: #535353;
-    --bg-yellow: #FFC300;
-}
-
 body {
     background-color: var(--bg-black);
     font-family: "Merriweather", serif;
