@@ -1,0 +1,148 @@
+body {
+    background-color: var(--bg-black);
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    overflow-x: hidden;
+    /* Consider if you really need these background properties here if it's just a solid color.
+       If you plan to add a background image later, keep them. */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    /* background-position: center center; */
+    /* background-attachment: fixed; */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Typography styles */
+h1, h2 {
+    color: var(--bg-orange);
+}
+
+h3 {
+    color: var(--bg-green);
+}
+
+/* Card specific styles for your custom look */
+.card-category {
+    background-color: var(--bg-gray); /* Example: a darker gray for the cards */
+    border: 1px solid var(--bg-green); /* Example: a border matching your green */
+    border-radius: 0.5rem;
+    overflow: hidden; /* Ensures image corners are rounded with card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.card-category:hover {
+    transform: translateY(-5px); /* Lift card slightly on hover */
+}
+
+.card-category .card-img-top {
+    max-height: 200px; /* Control image height */
+    object-fit: contain; /* Ensures image fits without cropping, maintaining aspect ratio */
+    padding: 1rem; /* Padding around the image inside the card */
+    background-color: var(--bg-white); /* Example: white background for the image area */
+}
+
+.card-title-gluck {
+    color: var(--bg-yellow); /* Custom title color for cards */
+    font-size: 1.25rem; /* Adjust font size */
+    margin-top: 0.5rem;
+}
+
+.card-title-contacto{
+    font-size: 1.8rem; /* Adjust font size */
+    margin-top: 3rem;
+}
+
+.section-card {
+    /* Keep your existing styles for section-card */
+    background-color: #343a40;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.section-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.section-card h2 {
+    color: #ffc107; /* Glück's gold color for headings */
+    margin-bottom: 1.5rem; /* More space below headings */
+    font-size: 2.2rem; /* Slightly larger heading */
+    text-align: center;
+    width: 100%; /* Ensure heading takes full width */
+}
+
+/* Styling for content within the section cards */
+.card-content {
+    width: 100%; /* Ensure content fills the card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Map Container Styling */
+.map-container {
+    position: relative;
+    padding-bottom: 75%; /* 4:3 aspect ratio (height/width * 100%). Adjust for 56.25% for 16:9, or 100% for 1:1 */
+    height: 100%;
+    overflow: hidden;
+    border-radius: 8px; /* Match card radius */
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0; /* Remove default iframe border */
+}
+
+/* Orders Section Styling */
+.orders-content {
+    padding: 20px; /* Adjust padding as needed */
+    height: 100%; /* Ensure it fills the card */
+}
+
+.whatsapp-link {
+    display: inline-flex; /* Use inline-flex to center the content within the link */
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem; /* Space from the title */
+    transition: transform 0.2s ease;
+}
+
+.whatsapp-link:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.whatsapp-number {
+    color: #28a745; /* WhatsApp green for the number */
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-top: 0.5rem; /* Space between icon and number */
+}
+
+/* Styles for the modal image */
+.modal-image-small {
+    max-width: 150px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures margin auto works */
+    margin-left: auto; /* Center image */
+    margin-right: auto; /* Center image */
+    border-radius: 8px; /* Optional: subtle rounded corners for modal image */
+    object-fit: contain; /* Ensures the entire image fits within the bounds without cropping */
+}
+
+@media (min-width: 768px) { /* For medium and larger screens */
+    .section-card:last-child {
+        margin-bottom: 0;
+    }
+}
