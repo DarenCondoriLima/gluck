@@ -1,148 +1,176 @@
+:root {
+    --bg-white: #ffffff;
+    --bg-black: #000000;
+    --bg-green: #2B7E38;
+    --bg-orange: #E26A07;
+    --bg-gray: #343a40; /* Updated to a darker, more Bootstrap-like gray */
+    --bg-yellow: #FFC300;
+}
+
 body {
     background-color: var(--bg-black);
     font-family: "Merriweather", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    overflow-x: hidden;
-    /* Consider if you really need these background properties here if it's just a solid color.
-       If you plan to add a background image later, keep them. */
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
-    /* background-position: center center; */
-    /* background-attachment: fixed; */
+    color: var(--bs-white); /* Use Bootstrap's white variable for better integration */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* Typography styles */
-h1, h2 {
+/* --- Section and Title Styles --- */
+.section-title-main {
     color: var(--bg-orange);
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-h3 {
+.section-subtitle-h3 {
     color: var(--bg-green);
+    font-size: 1.75rem;
+    font-weight: 600;
+    border-bottom: 2px solid var(--bg-green);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 1.5rem !important;
 }
 
-/* Card specific styles for your custom look */
-.card-category {
-    background-color: var(--bg-gray); /* Example: a darker gray for the cards */
-    border: 1px solid var(--bg-green); /* Example: a border matching your green */
+p, li {
+    font-weight: 300;
+}
+
+/* --- Product Card Styles --- */
+.card-product {
+    background-color: var(--bg-gray);
+    border: 1px solid var(--bg-green);
     border-radius: 0.5rem;
-    overflow: hidden; /* Ensures image corners are rounded with card */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
-.card-category:hover {
-    transform: translateY(-5px); /* Lift card slightly on hover */
+.card-product:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
-.card-category .card-img-top {
-    max-height: 200px; /* Control image height */
-    object-fit: contain; /* Ensures image fits without cropping, maintaining aspect ratio */
-    padding: 1rem; /* Padding around the image inside the card */
-    background-color: var(--bg-white); /* Example: white background for the image area */
+.card-product .card-img-top {
+    max-height: 250px;
+    object-fit: contain;
+    padding: 1.5rem;
+    background-color: var(--bg-white);
 }
 
-.card-title-gluck {
-    color: var(--bg-yellow); /* Custom title color for cards */
-    font-size: 1.25rem; /* Adjust font size */
-    margin-top: 0.5rem;
+.card-product .card-title {
+    color: var(--bg-yellow);
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-.card-title-contacto{
-    font-size: 1.8rem; /* Adjust font size */
-    margin-top: 3rem;
-}
-
+/* --- Contact Section Styles --- */
 .section-card {
-    /* Keep your existing styles for section-card */
-    background-color: #343a40;
+    background-color: var(--bg-gray);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    transition: transform 0.3s ease;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .section-card:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .section-card h2 {
-    color: #ffc107; /* Glück's gold color for headings */
-    margin-bottom: 1.5rem; /* More space below headings */
-    font-size: 2.2rem; /* Slightly larger heading */
-    text-align: center;
-    width: 100%; /* Ensure heading takes full width */
-}
-
-/* Styling for content within the section cards */
-.card-content {
-    width: 100%; /* Ensure content fills the card */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    color: var(--bg-yellow);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
     text-align: center;
 }
 
-/* Map Container Styling */
 .map-container {
+    /* Required for a responsive aspect ratio */
     position: relative;
-    padding-bottom: 75%; /* 4:3 aspect ratio (height/width * 100%). Adjust for 56.25% for 16:9, or 100% for 1:1 */
-    height: 100%;
+    width: 100%; /* Add this line */
+    padding-bottom: 75%; /* 4:3 Aspect Ratio (adjust as needed) */
+    height: 0;
     overflow: hidden;
     border-radius: 8px; /* Match card radius */
 }
 
 .map-container iframe {
+    /* Required for iframe to fill the parent container */
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100%; /* Add this line */
+    height: 100%; /* Add this line */
     border: 0; /* Remove default iframe border */
 }
 
-/* Orders Section Styling */
-.orders-content {
-    padding: 20px; /* Adjust padding as needed */
-    height: 100%; /* Ensure it fills the card */
-}
-
 .whatsapp-link {
-    display: inline-flex; /* Use inline-flex to center the content within the link */
-    align-items: center;
-    justify-content: center;
-    margin-top: 1rem; /* Space from the title */
     transition: transform 0.2s ease;
 }
 
 .whatsapp-link:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    transform: scale(1.05);
 }
 
 .whatsapp-number {
-    color: #28a745; /* WhatsApp green for the number */
+    color: var(--bg-green);
     font-weight: bold;
     font-size: 1.25rem;
-    margin-top: 0.5rem; /* Space between icon and number */
 }
 
-/* Styles for the modal image */
+/* --- Modal Styles --- */
+.modal-content {
+    border: 1px solid var(--bg-green);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--bg-green);
+}
+
+.modal-footer {
+    border-top: 1px solid var(--bg-green);
+}
+
+.modal-title {
+    color: var(--bg-orange);
+    font-weight: bold;
+}
+
 .modal-image-small {
-    max-width: 150px; /* Adjust as needed */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Ensures margin auto works */
-    margin-left: auto; /* Center image */
-    margin-right: auto; /* Center image */
-    border-radius: 8px; /* Optional: subtle rounded corners for modal image */
-    object-fit: contain; /* Ensures the entire image fits within the bounds without cropping */
+    max-width: 200px;
+    height: auto;
+    object-fit: contain;
+    background-color: var(--bs-white);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--bs-gray-500);
 }
 
-@media (min-width: 768px) { /* For medium and larger screens */
-    .section-card:last-child {
-        margin-bottom: 0;
+.modal-body h6 {
+    color: var(--bg-green);
+}
+
+.modal-footer .btn-primary {
+    background-color: var(--bg-orange);
+    border-color: var(--bg-orange);
+    font-weight: bold;
+}
+
+.modal-footer .btn-primary:hover {
+    background-color: #c25805;
+    border-color: #c25805;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .section-title-main {
+        font-size: 2rem;
+    }
+    .section-subtitle-h3 {
+        font-size: 1.5rem;
     }
 }
