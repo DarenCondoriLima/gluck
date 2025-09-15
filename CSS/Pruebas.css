@@ -153,6 +153,118 @@
     justify-content: center;
 }
 
+/* --- New: Servicio de Barra Section --- */
+
+.services-section {
+    border-radius: 10px;
+    padding: 3rem;
+}
+
+.service-description {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--bg-white);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-card {
+    background-color: var(--bg-gray);
+    border: 1px solid var(--bg-orange);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-color: var(--bg-yellow);
+}
+
+.service-icon {
+    width: 60px;
+    height: auto;
+}
+
+.service-title {
+    color: var(--bg-yellow);
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+
+.btn-service {
+    background-color: var(--bg-orange);
+    color: var(--bg-white);
+    border: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-service:hover {
+    background-color: var(--bg-yellow);
+    color: var(--bg-black);
+    transform: translateY(-2px);
+}
+
+/* --- New: Distribuye Nuestra Cerveza Section --- */
+
+.distribute-section {
+    color: var(--bg-white);
+}
+
+.distribute-intro {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.distribute-card {
+    background-color: var(--bg-gray);
+    border: 1px solid var(--bg-orange);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.distribute-card-title {
+    color: var(--bg-yellow);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.distribute-list {
+    list-style-type: none; /* Remove default bullet points */
+    padding-left: 0;
+}
+
+.distribute-list li {
+    position: relative;
+    padding-left: 20px; /* Space for the custom bullet point */
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+/* Create a custom bullet point with a circle and an orange border */
+.distribute-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 8px;
+    height: 8px;
+    border: 2px solid var(--bg-orange);
+    border-radius: 50%;
+    background-color: transparent;
+}
+
 /* Media queries para responsive */
 @media (max-width: 768px) {
     .product-card {

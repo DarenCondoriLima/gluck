@@ -7,7 +7,7 @@
                 description: "CERVEZA DE MARACUYA: Alcohol 5% IBUS 16 un estilo de cerveza totalmente refrescante y ligero dulzor, pensada en el verano, en la cual combinamos una cerveza estilo suave con maracuyá, haciendo que el lúpulo de la cerveza se mezcle con el sutil aroma del maracuyá dándole una sensación de frescura, perfecta para tomarla en esos días calurosos de verano. Ingredientes: cebada, lúpulo, agua, levadura, maracuyá.",
                 presentations: [
                     "Botella de 330ml: S/ 14.00",
-                    "Barril de 20 Litros: S/ 360.00",
+                    "Barril de 19 Litros: S/ 342.00",
                     "Barril de 30 Litros: S/ 540.00",
                     "Barril de 50 Litros: S/ 900.00"
                 ]
@@ -19,7 +19,7 @@
                 description: "CERVEZA GOLDEN ALE (DORADA). Vol. Alcohólico 5.5% IBUS 25 cerveza tradicional ligera, refrescante, facil de beber, aroma moderadamente a lupulos frutales, sensación en boca: cuerpo suave, espuma blanca y densa apaciguadora de la sed, ideal para tomarla helada y disfrutar con amigos.",
                 presentations: [
                     "Botella de 330ml: S/ 14.00",
-                    "Barril de 20 Litros: S/ 360.00",
+                    "Barril de 19 Litros: S/ 342.00",
                     "Barril de 30 Litros: S/ 540.00",
                     "Barril de 50 Litros: S/ 900.00"
                 ]
@@ -31,7 +31,7 @@
                 description: "CERVEZA RED ALE (ROJA): Vol. Alcohólico 6.5% ibus 26 cerveza de color rojo oscuro, con sabor marcado a cebada malteada y un suave dulzor inicial a caramelo o toffee, muy ligero aroma frutal. sensación en boca: toque seco al final, buen cuerpo con espuma sedosa",
                 presentations: [
                     "Botella de 330ml: S/ 14.00",
-                    "Barril de 20 Litros: S/ 360.00",
+                    "Barril de 19 Litros: S/ 342.00",
                     "Barril de 30 Litros: S/ 540.00",
                     "Barril de 50 Litros: S/ 900.00"
                 ]
@@ -43,7 +43,7 @@
                 description: "CERVEZA PORTER (NEGRA): Vol. Alcohólico 7% IBUS 25 cerveza oscura con un carácter a malta tostada y ligero aroma a chocolate y cacao. sensación en boca: buen cuerpo ligeramente amargo propio de los lúpulos utilizados en su elaboración, espuma sedosa de color crema buena para acompañar con carnes rojas",
                 presentations: [
                     "Botella de 330ml: S/ 14.00",
-                    "Barril de 20 Litros: S/ 360.00",
+                    "Barril de 19 Litros: S/ 342.00",
                     "Barril de 30 Litros: S/ 540.00",
                     "Barril de 50 Litros: S/ 900.00"
                 ]
@@ -55,7 +55,7 @@
                 description: "CERVEZA IPA: vol. Alcohólico 6% IBUS 57 Esta cerveza de origen milenario pone como protagonista el lúpulo con un amargor moderado a intenso sin embargo comparte los sabores dulces de la malta. como acompañamiento nos da aromas herbales y afrutados moderados, pero no invasivos, sorprende por su color ámbar intenso, espuma densa, sedosa de color blanco y buen cuerpo al momento de probarla dejándonos un retrogusto semiseco, pidiéndonos a gritos el siguiente sorbo.",
                 presentations: [
                     "Botella de 330ml: S/ 14.00",
-                    "Barril de 20 Litros: S/ 360.00",
+                    "Barril de 19 Litros: S/ 342.00",
                     "Barril de 30 Litros: S/ 540.00",
                     "Barril de 50 Litros: S/ 900.00"
                 ]
