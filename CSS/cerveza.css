@@ -38,34 +38,137 @@ p, li {
     font-weight: 300;
 }
 
-/* --- Product Card Styles --- */
-.card-product {
-    background-color: var(--bg-gray);
-    border: 1px solid var(--bg-green);
-    border-radius: 0.5rem;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
+/* --- Carrusel Custom --- */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            padding: 0 60px; /* Espacio para las flechas */
+        }
 
-.card-product:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-}
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            gap: 1.5rem;
+        }
 
-.card-product .card-img-top {
-    max-height: 250px;
-    object-fit: contain;
-    padding: 1.5rem;
-    background-color: var(--bg-white);
-}
+        .carousel-card {
+            flex: 0 0 calc(25% - 1.125rem); /* 25% para mostrar 4 cards, menos el gap */
+            min-width: 250px;
+        }
 
-.card-product .card-title {
-    color: var(--bg-yellow);
-    font-size: 1.5rem;
-    font-weight: bold;
-}
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--bg-orange);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-nav:hover {
+            background: #e06610;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-nav:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .carousel-nav:disabled:hover {
+            transform: translateY(-50%) scale(1);
+        }
+
+        .carousel-prev {
+            left: 10px;
+        }
+
+        .carousel-next {
+            right: 10px;
+        }
+
+        /* --- Product Card Styles --- */
+        .card-product {
+            background-color: var(--bg-gray);
+            border: 1px solid var(--bg-green);
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            height: 400px;
+        }
+
+        .card-product:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .card-product .card-img-top {
+            height: 250px;
+            object-fit: contain;
+            padding: 1.5rem;
+            background-color: var(--bg-white);
+        }
+
+        .card-product .card-title {
+            color: var(--bg-yellow);
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .carousel-card {
+                flex: 0 0 calc(33.333% - 1rem); /* 3 cards en tablet */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .carousel-card {
+                flex: 0 0 calc(50% - 0.75rem); /* 2 cards en móvil */
+            }
+            .carousel-container {
+                padding: 0 50px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .carousel-card {
+                flex: 0 0 calc(100% - 0.5rem); /* 1 card en móviles pequeños */
+            }
+            .carousel-container {
+                padding: 0 40px;
+            }
+        }
+
+        /* Estilos adicionales para la sección */
+        .section-title-main {
+            font-size: 2.5rem;
+            color: var(--bg-orange);
+            font-weight: bold;
+        }
+
+        .section-subtitle-h3 {
+            font-size: 1.8rem;
+            color: var(--bg-green);
+            font-weight: bold;
+        }
+
+/* --- Precios y Servicios Section --- */
 
 /* --- Contact Section Styles --- */
 .section-card {
